@@ -47,6 +47,8 @@ namespace ProcessApp
             this.label_threadCount = new System.Windows.Forms.Label();
             this.label_copyProcess = new System.Windows.Forms.Label();
             this.btn_closeProcess = new System.Windows.Forms.Button();
+            this.new_processStart = new System.Windows.Forms.TextBox();
+            this.btn_newProcess = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // listBox1
@@ -178,7 +180,7 @@ namespace ProcessApp
             // 
             // btn_closeProcess
             // 
-            this.btn_closeProcess.Location = new System.Drawing.Point(388, 355);
+            this.btn_closeProcess.Location = new System.Drawing.Point(374, 175);
             this.btn_closeProcess.Name = "btn_closeProcess";
             this.btn_closeProcess.Size = new System.Drawing.Size(75, 23);
             this.btn_closeProcess.TabIndex = 14;
@@ -186,11 +188,32 @@ namespace ProcessApp
             this.btn_closeProcess.UseVisualStyleBackColor = true;
             this.btn_closeProcess.Click += new System.EventHandler(this.btn_closeProcess_Click);
             // 
+            // new_processStart
+            // 
+            this.new_processStart.Location = new System.Drawing.Point(294, 215);
+            this.new_processStart.Name = "new_processStart";
+            this.new_processStart.Size = new System.Drawing.Size(251, 20);
+            this.new_processStart.TabIndex = 15;
+            this.new_processStart.TextChanged += new System.EventHandler(this.new_processStart_TextChanged);
+            // 
+            // btn_newProcess
+            // 
+            this.btn_newProcess.Enabled = false;
+            this.btn_newProcess.Location = new System.Drawing.Point(325, 250);
+            this.btn_newProcess.Name = "btn_newProcess";
+            this.btn_newProcess.Size = new System.Drawing.Size(171, 23);
+            this.btn_newProcess.TabIndex = 16;
+            this.btn_newProcess.Text = "Запустить новый процесс";
+            this.btn_newProcess.UseVisualStyleBackColor = true;
+            this.btn_newProcess.Click += new System.EventHandler(this.btn_newProcess_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(557, 390);
+            this.Controls.Add(this.btn_newProcess);
+            this.Controls.Add(this.new_processStart);
             this.Controls.Add(this.btn_closeProcess);
             this.Controls.Add(this.label_copyProcess);
             this.Controls.Add(this.label_threadCount);
@@ -232,6 +255,8 @@ namespace ProcessApp
         private Label label_threadCount;
         private Label label_copyProcess;
         private Button btn_closeProcess;
+        private TextBox new_processStart;
+        private Button btn_newProcess;
     }
 }
 

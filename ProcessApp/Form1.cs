@@ -87,6 +87,25 @@ namespace ProcessApp
         {
             killProcess.Close();
         }
+
+        private void new_processStart_TextChanged(object sender, EventArgs e)
+        {
+            if (new_processStart.Text.Length > 0)
+            {
+               btn_newProcess.Enabled = true;
+            }
+            else
+            {
+                btn_newProcess.Enabled = false;
+            }
+        }
+
+        private void btn_newProcess_Click(object sender, EventArgs e)
+        {
+            Process process = new Process();
+            process.StartInfo = new ProcessStartInfo(new_processStart.Text);
+            process.Start();
+        }
     }
 }
 
